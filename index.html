@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooming soon</title>
+
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .desktop, .mobile {
+        display: none;
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+    .desktop {
+        display: block;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    desktop img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+    body {
+        background-image: url('./bg-mario.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        flex: 1;
+    }
+
+    .mobile img {
+        max-width: 400px;
+        height: auto;
+        display: block;
+    }
+
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-img{
+        width: 50%;
+        margin-top: 1rem;
+    }
+
+    .img-text{
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .img-bottom {
+    width: 90%;
+    max-width: 400px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+    margin-top: auto;
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8));
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="desktop">
+        <img src="./mario-desktop.png" alt="Fondo desktop" />
+    </div>
+
+    <div class="mobile">
+        <div class="header">
+            <img class="header-img" src="./header-img.png" alt="Header Mobile" />
+        </div>
+        <img src="./img1-mobile.png" alt="Imagen 1 Mobile" class="img-text"/>
+        <img src="./img2-mobile.png" alt="Imagen 2 Mobile" class="img-bottom" />
+    </div>
+</body>
+</html>
+
